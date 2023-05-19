@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using OrnekUygulamaMVC.Models;
 
@@ -8,14 +9,14 @@ namespace OrnekUygulamaMVC.Controllers
     {
         public IActionResult GetProducts()
         {
-            var products = new List<Product>
-            {
-                new Product{Id=1,ProductName = "A Product",Quantity = 10},
-                new Product{Id=1,ProductName = "B Product",Quantity = 15},
-                new Product{Id=1,ProductName = "C Product",Quantity = 20}
-            };
-
-            return View(products);
+            //var products = new List<Product>
+            //{
+            //    new Product{Id=1,ProductName = "A Product",Quantity = 10},
+            //    new Product{Id=1,ProductName = "B Product",Quantity = 15},
+            //    new Product{Id=1,ProductName = "C Product",Quantity = 20}
+            //};
+            //  return View(products);
+            return View();
         }
 
         public IActionResult CreateProduct()
@@ -24,7 +25,8 @@ namespace OrnekUygulamaMVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateProduct(object x)
+      //  public IActionResult CreateProduct(string txtProductName, int txtQuantity)
+        public IActionResult CreateProduct(Product product)
         {
             return View();
         }

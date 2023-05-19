@@ -40,7 +40,8 @@ namespace OrnekUygulamaMVC
                 //    await context.Response.WriteAsync("Hello World!");
                 //});
                // endpoints.MapControllerRoute("Default", "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute("Default", "{controller=Product}/{action=GetProducts}/{id?}");
+               // endpoints.MapControllerRoute("Default", "{controller=Product}/{action=GetProducts}/{id?}");
+                endpoints.MapControllerRoute("Default", "{controller=Product}/{action=CreateProduct}/{id?}");
                 // endpoints.MapDefaultControllerRoute();
             });
         }
