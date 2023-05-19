@@ -1,0 +1,69 @@
+﻿@using OrnekUygulamaMVC.Extensions
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *,LayoutMvc
+
+@Html.TextBox("txtAdi",null,new{style="background-color:green;color: white"})
+@Html.CustomTextBox("txtCustomAdi",null,"Adınız")
+
+<a href="mailto:google.com">Email</a>
+<br />
+<p>Ahmet Özdemir</p>
+<br />
+<email a="abc" mail="ahmetzdmiir@gmail.com" display="Ahmet Özdemir"></email>
+<ahmet></ahmet>
+
+
+
+
+
+
+
+
+
+
+@*<cache>
+    Cache : @DateTime.Now
+
+</cache>
+<br/>
+@DateTime.Now*@
+
+
+@*<form asp-action="Index" asp-controller="Product" method="post">
+
+
+    @Html.TextBox("txtAdi")
+    <input type="text"/>
+
+</form>*@
+
+
+@*@model List<OrnekUygulamaMVC.Models.Product>
+
+<ul>
+    @foreach (var product in @Model)
+    {
+        <li>@product.ProductName</li>
+    }
+</ul> *@
+@* Razor Nedir ?*@
+
+@*@{
+    if (true)
+    {
+        <text>Evet</text>
+    }
+    else
+    {
+        <text>Hayır</text>
+    }
+}
+
+<h3>@(33 % 5 == 3 ? "Yes" : "No")</h3>
+
+@for (int i = 0; i < 10; i++)
+{
+    <h4>Ahmet Özdemir</h4>
+}
+
+<h8>@(5+10)</h8>*@
