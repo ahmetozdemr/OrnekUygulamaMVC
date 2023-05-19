@@ -1,6 +1,10 @@
 ﻿@using OrnekUygulamaMVC.Extensions
 @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
-@addTagHelper *,LayoutMvc
+@*@model OrnekUygulamaMVC.Models.ViewModels.UserProduct *@
+@*@model List<OrnekUygulamaMVC.Models.Product>*@
+@*model bazlı karşılayabilmemizi sağlamaktadır*@
+
+@model (OrnekUygulamaMVC.Models.Product p,OrnekUygulamaMVC.Models.User u)
 
 @Html.TextBox("txtAdi",null,new{style="background-color:green;color: white"})
 @Html.CustomTextBox("txtCustomAdi",null,"Adınız")
@@ -13,7 +17,19 @@
 <ahmet></ahmet>
 
 
+<h1>Ahmet Özdemir</h1>
 
+@Html.Partial("~/Views/Product/Partials/ListPartial.cshtml")
+
+
+
+<p>@Model.p.ProductName</p>
+<p>@Model.u.Name</p>
+
+@*@foreach (var product in @Model)
+{
+    <p>@product.ProductName</p>
+}*@
 
 
 
