@@ -1,12 +1,45 @@
 ﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
-@model OrnekUygulamaMVC.Models.Product
 
-<form asp-action="CreateProduct" asp-controller="Product" method="post">
-    <!-- Form içerisindeki input nesleri post edildiğinde bu nesnelere karşılı gelen propertyleri barındıran bir nesneyle otomatik olarak bind edilirler...-->
 
-    <input type="text" asp-for="ProductName" placeholder="Product Name" />
-    <br />
-    <input type="number" asp-for="Quantity" placeholder="Quantity" />
-    <br />
-    <button>Ürün Ekle</button>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<button id="btnGonder">Gönder</button>
+
+<script>
+
+    $("#btnGonder").click(() => {
+        $.post("https://localhost:5001/product/createproduct",{a:"a data", b:"b data"});
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<form asp-action="CreateProduct" asp-controller="Product" method="post">
+    
+    <input type="txt" name="txtvalue1"/><br/>
+    <input type="txt" name="txtvalue2"/><br/>
+    <input type="txt" name="txtvalue3"/><br/>
+    <button>Gönder</button>
+
 </form>
+
+<a asp-action="Index" asp-controller="Home" asp-route-a="ahmet" asp-route-b="mehmet" asp-route-id="123" asp-route-x="jdfsgnvdsn">contect</a>*@
