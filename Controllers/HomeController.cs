@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 
 namespace OrnekUygulamaMVC.Controllers
 {
@@ -6,8 +7,17 @@ namespace OrnekUygulamaMVC.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var images = new List<string>() { "img1", "img2", "img3", "img4" };
+            return View(images);
         }
 
+        public IActionResult Sayfa1()
+        {
+            return View();
+        }
+        public IActionResult Sayfa2()
+        {
+            return View();
+        }
     }
 }
