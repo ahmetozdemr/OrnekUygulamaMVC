@@ -1,0 +1,19 @@
+﻿@model List<Personel>
+
+<table>
+    <thead>
+    <tr>Adı</tr>
+    <tr>Soyadı</tr>
+    </thead>
+    <tbody>
+    @foreach (var personel in @Model)
+    {
+        <tr>
+            <td>@personel.Name</td>
+                <td>@personel.Surname</td>
+        </tr>
+    }
+
+    </tbody>
+</table>
+
