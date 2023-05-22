@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using OrnekUygulamaMVC.Handlers;
 
 namespace OrnekUygulamaMVC
 {
@@ -35,6 +36,12 @@ namespace OrnekUygulamaMVC
             //Endoint yapýlan isteðin varýþ noktasý.Url istek adresi
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.Map("example-route", async c =>
+                //{
+                //    //https://localhost:5001/example-route endpoints'e gelen herhangi bir istek controller'dan ziyade direkt olarak buradaki fonkdiyondan karþýlanacaktýr
+                //});
+                endpoints.Map("example-route", new ExampleHandler().Handler());
+                endpoints.Map("image/{imageName}", new ImageHandler().Handler(env.WebRootPath));
                 //endpoints.MapGet("/", async context =>
                 //{
                 //    await context.Response.WriteAsync("Hello World!");
